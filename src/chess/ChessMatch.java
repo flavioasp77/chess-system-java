@@ -25,10 +25,12 @@ public class ChessMatch {
 	}
 	
 	private void inicialSetup() {
-		board.plecePiece(new Rook(board, Color.WHITE), new Position(0, 0));
+		board.plecePiece(new Rook(board, Color.BLACK), new Position(0, 0));
 		board.plecePiece(new King(board, Color.BLACK), new Position(0, 4));
 		board.plecePiece(new King(board, Color.WHITE), new Position(7, 4));
 		board.plecePiece(new Rook(board, Color.BLACK), new Position(0, 7));
+		board.plecePiece(new Rook(board, Color.WHITE), new Position(7, 0));
+		board.plecePiece(new Rook(board, Color.WHITE), new Position(7, 7));
 		
 	}
 }
