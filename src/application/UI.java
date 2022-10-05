@@ -55,18 +55,24 @@ public class UI {
 		printBoard(chessMatch.getPieces());
 		System.out.println();
 		printCapturedPieces(captured);
+		System.out.println();
 		System.out.println("Turn: " + chessMatch.getTurn());
 		System.out.println("Waiting player: " + chessMatch.getCurrentPlayer());
+		
+		if (chessMatch.getCheck()) {
+			System.out.println("CHECK!");
+		}
 	}
 	
 	public static void printBoard(ChessPiece[][] pieces) {
 		for (int i = 0; i < pieces.length; i += 1) {
-			System.out.print((8 - i) + " ");
+			System.out.print((8 - i) + "|" + " ");
 			for (int j = 0; j < pieces.length; j += 1) {
 				printPiece(pieces[i][j], false);
 			}
 			System.out.println();
 		}
+		System.out.println("-----------------");
 		System.out.println("  a b c d e f g h");
 	}
 	
@@ -110,7 +116,6 @@ public class UI {
 		System.out.print(ANSI_YELLOW);
 		System.out.print("Black: ");
 		System.out.print(Arrays.toString(black.toArray()));
-		System.out.println(ANSI_RESET);
-		System.out.println();
+		System.out.println(ANSI_RESET);		
 	}
 }
