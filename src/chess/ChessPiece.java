@@ -19,11 +19,11 @@ public abstract class ChessPiece extends Piece {
 	}
 	
 	public void increaseMoveCount() {
-		moveCount += 1;
+		moveCount ++;
 	}
 	
-	public void deecreaseMoveCount() {
-		moveCount -= 1;
+	public void deacreaseMoveCount() {
+		moveCount --;
 	}
 
 	public Color getColor() {
